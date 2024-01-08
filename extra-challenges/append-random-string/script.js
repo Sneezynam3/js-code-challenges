@@ -10,3 +10,18 @@ const codingTerms = [
     "Conditional: A statement that allows you to make decisions in your code.",
     "Loop: A construct that allows you to repeat a block of code multiple times.",
   ];
+
+  
+  
+  function getRandomElement(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
+  
+
+  const textElement = document.getElementById("text");
+
+  document.querySelector("#change-text").addEventListener("click", function() {
+    const randomElement = getRandomElement(codingTerms);
+    textElement.textContent = randomElement;
+  });
