@@ -9,3 +9,24 @@ const str = "Gabba boo dah ugh fpp BOO gabba doo Boo"
 console.log(convertToObjectWithCounts(str)) => { gabba: 2, boo: 3, dah: 1, ugh: 1, fpp: 1, doo: 1 }
 
 */
+
+function convertToObjectWithCounts(str) {
+    const wordCounts = {};
+  
+    const words = str.split(' ');
+  
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i].toLowerCase();
+  
+      if (wordCounts[word]) {
+        wordCounts[word] += 1;
+      } else {
+        wordCounts[word] = 1;
+      }
+    }
+  
+    return wordCounts;
+  }
+  
+  const str = "Gabba boo dah ugh fpp BOO gabba doo Boo";
+  console.log(convertToObjectWithCounts(str));
